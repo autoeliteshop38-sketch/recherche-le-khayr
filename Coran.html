@@ -1,1 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Le Coran — Recherche le Khayr</title>
+
+  <meta
+    name="description"
+    content="Découvrez le Coran et le Hadith du jour sur Recherche le Khayr."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --vert: #123c32;
+      --vert-clair: #245b4d;
+      --or: #d6b36a;
+      --creme: #f6f1e7;
+      --blanc: #ffffff;
+      --texte: #24332e;
+      --gris: #69756f;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--creme);
+      color: var(--texte);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--vert);
+      color: white;
+      padding: 18px 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+
+    .barre {
+      max-width: 1200px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: var(--or);
+    }
+
+    .retour {
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .retour:hover {
+      color: var(--or);
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          rgba(18,60,50,.9),
+          rgba(18,60,50,.95)
+        );
+
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .hero .icone {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 68px);
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: var(--or);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #eeeeee;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px 80px;
+    }
+
+    .recherche {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(30,50,40,.08);
+      margin-bottom: 40px;
+    }
+
+    .recherche label {
+      display: block;
+      color: var(--vert);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .champ {
+      display: flex;
+      gap: 10px;
+    }
+
+    .champ input {
+      flex: 1;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .champ button {
+      border: none;
+      background: var(--vert);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .titre {
+      text-align: center;
+      margin: 50px 0 30px;
+    }
+
+    .titre .ornement {
+      color: var(--or);
+      font-size: 23px;
+    }
+
+    .titre h2 {
+      color: var(--vert);
+      font-size: 32px;
+      margin-top: 5px;
+    }
+
+    .titre p {
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+    }
+
+    .sourates {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .sourate {
+      background: white;
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid rgba(18,60,50,.08);
+      box-shadow: 0 6px 20px rgba(30,50,40,.06);
+    }
+
+    .sourate h3 {
+      color: var(--vert);
+      margin-bottom: 7px;
+    }
+
+    .sourate p {
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .sourate button {
+      margin-top: 15px;
+      padding: 9px 15px;
+      border: none;
+      background: var(--vert);
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .hadith {
+      margin-top: 70px;
+      background:
+        linear-gradient(
+          rgba(18,60,50,.95),
+          rgba(18,60,50,.95)
+        );
+
+      color: white;
+      padding: 45px 30px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(20,50,40,.12);
+    }
+
+    .hadith .icone {
+      font-size: 42px;
+    }
+
+    .hadith h2 {
+      color: var(--or);
+      margin: 10px 0 20px;
+      font-size: 30px;
+    }
+
+    .hadith .message {
+      max-width: 750px;
+      margin: auto;
+      color: #eeeeee;
+      font-family: Arial, sans-serif;
+    }
+
+    .hadith .source {
+      margin-top: 20px;
+      color: var(--or);
+      font-weight: bold;
+    }
+
+    .information {
+      margin-top: 45px;
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .information h3 {
+      color: var(--vert);
+      margin-bottom: 10px;
+    }
+
+    .information p {
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    footer {
+      background: var(--vert);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer strong {
+      color: var(--or);
+    }
+
+    footer p {
+      margin-top: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #dce3df;
+    }
+
+    @media (max-width: 800px) {
+
+      .sourates {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .barre {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .champ {
+        flex-direction: column;
+      }
+
+      .champ button {
+        width: 100%;
+      }
+
+      .sourates {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 18px;
+      }
+
+      main {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="barre">
+
+    <div class="logo">
+      Recherche <span>le Khayr</span>
+    </div>
+
+    <a class="retour" href="index.html">
+      ← Retour à l'accueil
+    </a>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="icone">📖</div>
+
+  <h1>
+    Le <span>Coran</span>
+  </h1>
+
+  <p>
+    Une espace dédié à la lecture, à la découverte
+    et à la méditation du Livre d'Allah.
+  </p>
+
+</section>
+
+
+<main>
+
+  <section class="recherche">
+
+    <label for="recherche">
+      🔎 Rechercher une sourate
+    </label>
+
+    <div class="champ">
+
+      <input
+        id="recherche"
+        type="search"
+        placeholder="Exemple : Al-Fatiha"
+        oninput="filtrerSourates()"
+      >
+
+      <button onclick="filtrerSourates()">
+        Rechercher
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="titre">
+
+      <div class="ornement">
+        ✦ ۞ ✦
+      </div>
+
+      <h2>Les sourates</h2>
+
+      <p>
+        La liste complète des 114 sourates sera connectée
+        à une source vérifiée.
+      </p>
+
+    </div>
+
+
+    <div class="sourates" id="listeSourates">
+
+      <article class="sourate" data-nom="Al-Fatiha">
+
+        <h3>1 — Al-Fatiha</h3>
+
+        <p>
+          La première sourate du Coran.
+        </p>
+
+        <button onclick="messageSource()">
+          Ouvrir
+        </button>
+
+      </article>
+
+
+      <article class="sourate" data-nom="Al-Baqara">
+
+        <h3>2 — Al-Baqara</h3>
+
+        <p>
+          La plus longue sourate du Coran.
+        </p>
+
+        <button onclick="messageSource()">
+          Ouvrir
+        </button>
+
+      </article>
+
+
+      <article class="sourate" data-nom="Al-Ikhlas">
+
+        <h3>112 — Al-Ikhlas</h3>
+
+        <p>
+          Une sourate consacrée à l'unicité d'Allah.
+        </p>
+
+        <button onclick="messageSource()">
+          Ouvrir
+        </button>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <section class="hadith">
+
+    <div class="icone">
+      📜
+    </div>
+
+    <h2>Hadith du jour</h2>
+
+    <div class="message">
+
+      Le système du Hadith du jour sera prochainement
+      connecté à une source vérifiée.
+
+      <br><br>
+
+      Chaque hadith affiché devra comporter sa
+      référence précise et son niveau d'authenticité.
+
+    </div>
+
+    <div class="source">
+      Source vérifiée — en cours d'intégration
+    </div>
+
+  </section>
+
+
+  <section class="information">
+
+    <h3>🔐 Notre engagement</h3>
+
+    <p>
+      Recherche le Khayr s'engage à privilégier des sources
+      vérifiables pour les textes religieux présentés sur la
+      plateforme. Les références seront affichées afin de
+      permettre à chacun de vérifier les informations.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    Recherche le Khayr
+  </strong>
+
+  <p>
+    Apprendre • Se rappeler • Partager • Faire le bien
+  </p>
+
+  <p>
+    © 2026 Recherche le Khayr
+  </p>
+
+</footer>
+
+
+<script>
+
+function filtrerSourates() {
+
+  const recherche =
+    document
+      .getElementById("recherche")
+      .value
+      .toLowerCase()
+      .trim();
+
+  const sourates =
+    document.querySelectorAll(".sourate");
+
+  sourates.forEach(function(sourate) {
+
+    const nom =
+      sourate.dataset.nom.toLowerCase();
+
+    if (nom.includes(recherche)) {
+      sourate.style.display = "";
+    } else {
+      sourate.style.display = "none";
+    }
+
+  });
+}
+
+
+function messageSource() {
+
+  alert(
+    "La lecture de cette sourate sera activée après la connexion à la source vérifiée du Coran."
+  );
+
+}
+
+</script>
+
+</body>
+</html>
