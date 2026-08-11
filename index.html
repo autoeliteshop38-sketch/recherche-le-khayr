@@ -1,1 +1,437 @@
 
+Auto elite shop <autoeliteshop38@gmail.com>
+19:09 (il y a 0 minute)
+À moi
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recherche le Khayr</title>
+
+  <meta name="description" content="Recherche le Khayr - Une plateforme islamique pour apprendre, lire, partager et accomplir le bien.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f1e8;
+      color: #24352d;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #173c32;
+      color: white;
+      padding: 18px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #d7b56d;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d7b56d;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 70px 30px;
+      border-radius: 22px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(20, 54, 45, .78), rgba(20, 54, 45, .78)),
+        radial-gradient(circle at center, #54776b, #173c32);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .search {
+      max-width: 650px;
+      margin: 30px auto 0;
+      display: flex;
+    }
+
+    .search input {
+      flex: 1;
+      padding: 16px;
+      border: none;
+      border-radius: 10px 0 0 10px;
+      font-size: 16px;
+    }
+
+    .search button {
+      padding: 16px 22px;
+      border: none;
+      background: #d7b56d;
+      color: #173c32;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 55px 0 25px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: #173c32;
+    }
+
+    .section-title p {
+      color: #66736d;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: transform .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #173c32;
+    }
+
+    .card p {
+      color: #66736d;
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #173c32;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .banner {
+      margin: 45px 0;
+      padding: 45px 25px;
+      text-align: center;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #234f42, #416c5e);
+      color: white;
+    }
+
+    .banner h2 {
+      margin-bottom: 10px;
+    }
+
+    .library {
+      background: #fff;
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    }
+
+    .library p {
+      max-width: 700px;
+      margin: 12px auto 20px;
+      color: #66736d;
+    }
+
+    footer {
+      background: #173c32;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 7px 0;
+      color: #d8ddd9;
+    }
+
+    @media (max-width: 800px) {
+      .header-content {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .search {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .search input,
+      .search button {
+        border-radius: 10px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="logo">
+      Recherche <span>le Khayr</span>
+    </div>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#coran">Coran</a>
+      <a href="#bibliotheque">Bibliothèque</a>
+      <a href="#prieres">Prières</a>
+      <a href="#actions">Actions</a>
+      <a href="#defunts">Défunts</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="accueil">
+
+  <h1>Recherche le Khayr</h1>
+
+  <p>
+    Une plateforme dédiée au rappel, au savoir,
+    au partage et à la recherche du bien.
+  </p>
+
+  <div class="search">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Que recherchez-vous ?"
+    >
+
+    <button onclick="rechercher()">
+      Rechercher
+    </button>
+  </div>
+
+</section>
+
+<main>
+
+  <div class="section-title">
+    <h2>Explorez nos ressources</h2>
+    <p>Découvrez les différentes rubriques de Recherche le Khayr.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card" id="coran">
+      <div class="icon">📖</div>
+      <h3>Le Coran</h3>
+      <p>
+        Accédez aux sourates et préparez-vous à découvrir
+        prochainement une lecture directement sur le site.
+      </p>
+      <a class="button" href="#">Découvrir</a>
+    </div>
+
+    <div class="card" id="bibliotheque">
+      <div class="icon">📚</div>
+      <h3>Bibliothèque</h3>
+      <p>
+        Une bibliothèque virtuelle pour retrouver
+        des ouvrages et ressources islamiques.
+      </p>
+      <a class="button" href="#">Ouvrir la bibliothèque</a>
+    </div>
+
+    <div class="card" id="prieres">
+      <div class="icon">🕌</div>
+      <h3>Prières</h3>
+      <p>
+        Retrouvez les horaires de prière et différents
+        rappels utiles au quotidien.
+      </p>
+      <a class="button" href="#">Voir les prières</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌙</div>
+      <h3>Rappels</h3>
+      <p>
+        Des rappels et enseignements pour nourrir
+        la foi et rechercher le bien.
+      </p>
+      <a class="button" href="#">Lire</a>
+    </div>
+
+    <div class="card" id="actions">
+      <div class="icon">❤️</div>
+      <h3>Actions & Sadaqa</h3>
+      <p>
+        Découvrez des actions utiles et des initiatives
+        permettant de contribuer au bien.
+      </p>
+      <a class="button" href="#">Découvrir</a>
+    </div>
+
+    <div class="card" id="defunts">
+      <div class="icon">🤲</div>
+      <h3>Défunts</h3>
+      <p>
+        Invocations, rappels et ressources destinés
+        à accompagner les familles avec respect.
+      </p>
+      <a class="button" href="#">Découvrir</a>
+    </div>
+
+  </div>
+
+  <div class="banner">
+    <h2>🌙 Rechercher le bien, partager le bien</h2>
+    <p>
+      « Et accomplissez le bien afin que vous réussissiez. »
+    </p>
+  </div>
+
+  <div class="section-title">
+    <h2>📚 Votre bibliothèque islamique</h2>
+    <p>
+      Une bibliothèque virtuelle pensée pour permettre
+      la lecture directement depuis le site.
+    </p>
+  </div>
+
+  <div class="library">
+
+    <h3>La bibliothèque arrive</h3>
+
+    <p>
+      Cette partie sera développée pour permettre
+      la lecture en ligne d'ouvrages disponibles
+      légalement, avec une navigation confortable
+      sur ordinateur et téléphone.
+    </p>
+
+    <a class="button" href="#bibliotheque">
+      Accéder à la bibliothèque
+    </a>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <h3>Recherche le Khayr</h3>
+
+  <p>
+    Apprendre • Partager • Se rappeler • Faire le bien
+  </p>
+
+  <p>
+    © 2026 Recherche le Khayr
+  </p>
+
+</footer>
+
+<script>
+
+function rechercher() {
+
+  const recherche =
+    document.getElementById("searchInput").value.trim();
+
+  if (recherche === "") {
+
+    alert("Veuillez écrire votre recherche.");
+
+    return;
+  }
+
+  alert(
+    "Votre recherche : " +
+    recherche +
+    "\n\nLe moteur de recherche complet sera ajouté prochainement."
+  );
+}
+
+</script>
+
+</body>
+</html>
