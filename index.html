@@ -1,8 +1,3 @@
-
-Auto elite shop <autoeliteshop38@gmail.com>
-19:09 (il y a 0 minute)
-À moi
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +6,7 @@ Auto elite shop <autoeliteshop38@gmail.com>
 
   <title>Recherche le Khayr</title>
 
-  <meta name="description" content="Recherche le Khayr - Une plateforme islamique pour apprendre, lire, partager et accomplir le bien.">
+  <meta name="description" content="Recherche le Khayr — Le savoir, le rappel, le partage et la recherche du bien.">
 
   <style>
     * {
@@ -20,230 +15,394 @@ Auto elite shop <autoeliteshop38@gmail.com>
       padding: 0;
     }
 
+    :root {
+      --vert: #123c32;
+      --vert-clair: #245b4d;
+      --or: #d6b36a;
+      --creme: #f6f1e7;
+      --blanc: #ffffff;
+      --texte: #24332e;
+      --gris: #69756f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f1e8;
-      color: #24352d;
-      line-height: 1.6;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--creme);
+      color: var(--texte);
+      line-height: 1.7;
     }
 
     header {
-      background: #173c32;
+      background: rgba(18, 60, 50, 0.97);
       color: white;
-      padding: 18px 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
     }
 
-    .header-content {
-      max-width: 1200px;
+    .barre {
+      max-width: 1250px;
       margin: auto;
+      min-height: 76px;
+      padding: 12px 25px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .logo {
       font-size: 25px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .logo span {
-      color: #d7b56d;
+      color: var(--or);
     }
 
     nav {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
+      font-family: Arial, sans-serif;
       font-size: 14px;
+      transition: .2s;
     }
 
     nav a:hover {
-      color: #d7b56d;
+      color: var(--or);
     }
 
     .hero {
-      max-width: 1200px;
-      margin: 25px auto;
-      padding: 70px 30px;
-      border-radius: 22px;
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 70px 25px;
       background:
-        linear-gradient(rgba(20, 54, 45, .78), rgba(20, 54, 45, .78)),
-        radial-gradient(circle at center, #54776b, #173c32);
+        linear-gradient(
+          rgba(10, 39, 32, .72),
+          rgba(10, 39, 32, .82)
+        ),
+        radial-gradient(
+          circle at 50% 30%,
+          #648a79,
+          #123c32 70%
+        );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "✦ ۞ ✦ ۞ ✦ ۞ ✦";
+      position: absolute;
+      top: 30px;
+      left: 0;
+      right: 0;
+      color: rgba(214,179,106,.35);
+      font-size: 24px;
+      letter-spacing: 20px;
+    }
+
+    .hero-contenu {
+      max-width: 850px;
       color: white;
+    }
+
+    .croissant {
+      font-size: 58px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 45px;
-      margin-bottom: 15px;
+      font-size: clamp(42px, 7vw, 76px);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 span {
+      color: var(--or);
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
       max-width: 700px;
       margin: auto;
+      color: #f2f0e9;
     }
 
-    .search {
+    .recherche {
       max-width: 650px;
-      margin: 30px auto 0;
+      margin: 35px auto 0;
       display: flex;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
     }
 
-    .search input {
+    .recherche input {
       flex: 1;
-      padding: 16px;
+      padding: 17px 20px;
       border: none;
-      border-radius: 10px 0 0 10px;
+      outline: none;
       font-size: 16px;
+      border-radius: 12px 0 0 12px;
+      font-family: Arial, sans-serif;
     }
 
-    .search button {
-      padding: 16px 22px;
+    .recherche button {
+      padding: 17px 24px;
       border: none;
-      background: #d7b56d;
-      color: #173c32;
+      background: var(--or);
+      color: var(--vert);
       font-weight: bold;
-      border-radius: 0 10px 10px 0;
       cursor: pointer;
+      border-radius: 0 12px 12px 0;
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1250px;
       margin: auto;
-      padding: 0 20px 50px;
+      padding: 20px 25px 70px;
     }
 
-    .section-title {
+    .titre-section {
       text-align: center;
-      margin: 55px 0 25px;
+      margin: 70px 0 35px;
     }
 
-    .section-title h2 {
-      font-size: 30px;
-      color: #173c32;
+    .titre-section .ornement {
+      color: var(--or);
+      font-size: 24px;
+      margin-bottom: 8px;
     }
 
-    .section-title p {
-      color: #66736d;
+    .titre-section h2 {
+      color: var(--vert);
+      font-size: 34px;
+      margin-bottom: 8px;
     }
 
-    .cards {
+    .titre-section p {
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+    }
+
+    .cartes {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 24px;
     }
 
-    .card {
+    .carte {
+      background: var(--blanc);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(30,50,40,.08);
+      border: 1px solid rgba(18,60,50,.08);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .carte:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(30,50,40,.14);
+    }
+
+    .icone {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .carte h3 {
+      color: var(--vert);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .carte p {
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .bouton {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 9px;
+      background: var(--vert);
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    .bouton:hover {
+      background: var(--vert-clair);
+    }
+
+    .banniere {
+      margin: 75px 0;
+      padding: 65px 25px;
+      border-radius: 25px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(
+          rgba(18,60,50,.85),
+          rgba(18,60,50,.9)
+        ),
+        radial-gradient(
+          circle at center,
+          #5c806f,
+          #123c32
+        );
+      box-shadow: 0 15px 40px rgba(20,50,40,.12);
+    }
+
+    .banniere .symbole {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .banniere h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .banniere p {
+      color: #eee;
+    }
+
+    .bibliotheque {
       background: white;
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      transition: transform .2s;
+      border-radius: 25px;
+      padding: 45px 30px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(30,50,40,.08);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .icon {
-      font-size: 40px;
+    .bibliotheque h3 {
+      color: var(--vert);
+      font-size: 28px;
       margin-bottom: 12px;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #173c32;
-    }
-
-    .card p {
-      color: #66736d;
-      margin-bottom: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 10px 16px;
-      background: #173c32;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    .banner {
-      margin: 45px 0;
-      padding: 45px 25px;
-      text-align: center;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #234f42, #416c5e);
-      color: white;
-    }
-
-    .banner h2 {
-      margin-bottom: 10px;
-    }
-
-    .library {
-      background: #fff;
-      border-radius: 20px;
-      padding: 35px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-    }
-
-    .library p {
+    .bibliotheque p {
       max-width: 700px;
-      margin: 12px auto 20px;
-      color: #66736d;
+      margin: 0 auto 25px;
+      color: var(--gris);
+      font-family: Arial, sans-serif;
     }
 
     footer {
-      background: #173c32;
+      background: var(--vert);
       color: white;
-      padding: 35px 20px;
       text-align: center;
+      padding: 45px 20px;
+    }
+
+    footer .logo-footer {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    footer span {
+      color: var(--or);
     }
 
     footer p {
-      margin: 7px 0;
-      color: #d8ddd9;
+      color: #dce3df;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin: 6px;
     }
 
-    @media (max-width: 800px) {
-      .header-content {
+    @media (max-width: 850px) {
+      .barre {
         flex-direction: column;
+        padding: 15px;
       }
 
       nav {
-        justify-content: center;
+        gap: 12px;
       }
 
-      .hero h1 {
-        font-size: 34px;
+      .hero {
+        min-height: 520px;
       }
 
-      .cards {
+      .cartes {
         grid-template-columns: 1fr;
       }
 
-      .search {
-        flex-direction: column;
-        gap: 8px;
+      .titre-section {
+        margin-top: 50px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .logo {
+        font-size: 22px;
       }
 
-      .search input,
-      .search button {
-        border-radius: 10px;
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 60px 18px;
+      }
+
+      .croissant {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .recherche {
+        flex-direction: column;
+        gap: 8px;
+        box-shadow: none;
+      }
+
+      .recherche input,
+      .recherche button {
         width: 100%;
+        border-radius: 10px;
+      }
+
+      main {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .carte {
+        padding: 25px 20px;
+      }
+
+      .banniere {
+        padding: 50px 20px;
+      }
+
+      .banniere h2 {
+        font-size: 27px;
       }
     }
   </style>
@@ -252,153 +411,238 @@ Auto elite shop <autoeliteshop38@gmail.com>
 <body>
 
 <header>
-  <div class="header-content">
+  <div class="barre">
+
     <div class="logo">
       Recherche <span>le Khayr</span>
     </div>
 
     <nav>
       <a href="#accueil">Accueil</a>
+      <a href="#ressources">Ressources</a>
       <a href="#coran">Coran</a>
       <a href="#bibliotheque">Bibliothèque</a>
       <a href="#prieres">Prières</a>
       <a href="#actions">Actions</a>
-      <a href="#defunts">Défunts</a>
     </nav>
+
   </div>
 </header>
 
 <section class="hero" id="accueil">
 
-  <h1>Recherche le Khayr</h1>
+  <div class="hero-contenu">
 
-  <p>
-    Une plateforme dédiée au rappel, au savoir,
-    au partage et à la recherche du bien.
-  </p>
+    <div class="croissant">🌙</div>
 
-  <div class="search">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Que recherchez-vous ?"
-    >
+    <h1>
+      Recherche <span>le Khayr</span>
+    </h1>
 
-    <button onclick="rechercher()">
-      Rechercher
-    </button>
+    <p>
+      Une plateforme dédiée au rappel, au savoir,
+      au partage et à la recherche du bien.
+    </p>
+
+    <div class="recherche">
+
+      <input
+        type="text"
+        id="recherche"
+        placeholder="Rechercher une ressource..."
+      >
+
+      <button onclick="lancerRecherche()">
+        Rechercher
+      </button>
+
+    </div>
+
   </div>
 
 </section>
 
 <main>
 
-  <div class="section-title">
-    <h2>Explorez nos ressources</h2>
-    <p>Découvrez les différentes rubriques de Recherche le Khayr.</p>
-  </div>
+  <section id="ressources">
 
-  <div class="cards">
+    <div class="titre-section">
 
-    <div class="card" id="coran">
-      <div class="icon">📖</div>
-      <h3>Le Coran</h3>
+      <div class="ornement">✦ ۞ ✦</div>
+
+      <h2>Explorez nos ressources</h2>
+
       <p>
-        Accédez aux sourates et préparez-vous à découvrir
-        prochainement une lecture directement sur le site.
+        Découvrez les différentes rubriques de Recherche le Khayr.
       </p>
-      <a class="button" href="#">Découvrir</a>
+
     </div>
 
-    <div class="card" id="bibliotheque">
-      <div class="icon">📚</div>
-      <h3>Bibliothèque</h3>
-      <p>
-        Une bibliothèque virtuelle pour retrouver
-        des ouvrages et ressources islamiques.
-      </p>
-      <a class="button" href="#">Ouvrir la bibliothèque</a>
+    <div class="cartes">
+
+      <article class="carte" id="coran">
+
+        <div class="icone">📖</div>
+
+        <h3>Le Coran</h3>
+
+        <p>
+          Découvrez les sourates et préparez-vous
+          à retrouver prochainement une lecture
+          directement sur le site.
+        </p>
+
+        <a class="bouton" href="#">
+          Découvrir
+        </a>
+
+      </article>
+
+      <article class="carte" id="bibliotheque">
+
+        <div class="icone">📚</div>
+
+        <h3>Bibliothèque</h3>
+
+        <p>
+          Une bibliothèque virtuelle pensée pour
+          faciliter l'accès aux ouvrages et ressources
+          disponibles légalement.
+        </p>
+
+        <a class="bouton" href="#">
+          Explorer
+        </a>
+
+      </article>
+
+      <article class="carte" id="prieres">
+
+        <div class="icone">🕌</div>
+
+        <h3>Prières</h3>
+
+        <p>
+          Retrouvez les horaires de prière et
+          différents rappels utiles au quotidien.
+        </p>
+
+        <a class="bouton" href="#">
+          Voir les prières
+        </a>
+
+      </article>
+
+      <article class="carte">
+
+        <div class="icone">🌙</div>
+
+        <h3>Rappels</h3>
+
+        <p>
+          Des rappels et enseignements pour
+          nourrir la foi et rechercher le bien.
+        </p>
+
+        <a class="bouton" href="#">
+          Lire
+        </a>
+
+      </article>
+
+      <article class="carte" id="actions">
+
+        <div class="icone">❤️</div>
+
+        <h3>Actions & Sadaqa</h3>
+
+        <p>
+          Découvrez des actions utiles et des
+          initiatives permettant de contribuer au bien.
+        </p>
+
+        <a class="bouton" href="#">
+          Découvrir
+        </a>
+
+      </article>
+
+      <article class="carte">
+
+        <div class="icone">🤲</div>
+
+        <h3>Défunts</h3>
+
+        <p>
+          Invocations, rappels et ressources destinés
+          à accompagner les familles avec respect.
+        </p>
+
+        <a class="bouton" href="#">
+          Découvrir
+        </a>
+
+      </article>
+
     </div>
 
-    <div class="card" id="prieres">
-      <div class="icon">🕌</div>
-      <h3>Prières</h3>
-      <p>
-        Retrouvez les horaires de prière et différents
-        rappels utiles au quotidien.
-      </p>
-      <a class="button" href="#">Voir les prières</a>
-    </div>
+  </section>
 
-    <div class="card">
-      <div class="icon">🌙</div>
-      <h3>Rappels</h3>
-      <p>
-        Des rappels et enseignements pour nourrir
-        la foi et rechercher le bien.
-      </p>
-      <a class="button" href="#">Lire</a>
-    </div>
+  <section class="banniere">
 
-    <div class="card" id="actions">
-      <div class="icon">❤️</div>
-      <h3>Actions & Sadaqa</h3>
-      <p>
-        Découvrez des actions utiles et des initiatives
-        permettant de contribuer au bien.
-      </p>
-      <a class="button" href="#">Découvrir</a>
-    </div>
+    <div class="symbole">🌙 ✦</div>
 
-    <div class="card" id="defunts">
-      <div class="icon">🤲</div>
-      <h3>Défunts</h3>
-      <p>
-        Invocations, rappels et ressources destinés
-        à accompagner les familles avec respect.
-      </p>
-      <a class="button" href="#">Découvrir</a>
-    </div>
+    <h2>
+      Rechercher le bien, partager le bien
+    </h2>
 
-  </div>
-
-  <div class="banner">
-    <h2>🌙 Rechercher le bien, partager le bien</h2>
     <p>
-      « Et accomplissez le bien afin que vous réussissiez. »
-    </p>
-  </div>
-
-  <div class="section-title">
-    <h2>📚 Votre bibliothèque islamique</h2>
-    <p>
-      Une bibliothèque virtuelle pensée pour permettre
-      la lecture directement depuis le site.
-    </p>
-  </div>
-
-  <div class="library">
-
-    <h3>La bibliothèque arrive</h3>
-
-    <p>
-      Cette partie sera développée pour permettre
-      la lecture en ligne d'ouvrages disponibles
-      légalement, avec une navigation confortable
-      sur ordinateur et téléphone.
+      Une plateforme pensée autour du savoir,
+      du rappel et des bonnes actions.
     </p>
 
-    <a class="button" href="#bibliotheque">
-      Accéder à la bibliothèque
-    </a>
+  </section>
 
-  </div>
+  <section>
+
+    <div class="titre-section">
+
+      <div class="ornement">✦ ۞ ✦</div>
+
+      <h2>Bibliothèque virtuelle</h2>
+
+      <p>
+        Lire et découvrir des ouvrages directement depuis le site.
+      </p>
+
+    </div>
+
+    <div class="bibliotheque">
+
+      <h3>📚 Votre espace de lecture</h3>
+
+      <p>
+        Cette bibliothèque sera progressivement développée
+        pour permettre la consultation d'ouvrages disponibles
+        légalement, avec une expérience confortable sur ordinateur
+        comme sur téléphone.
+      </p>
+
+      <a class="bouton" href="#bibliotheque">
+        Découvrir la bibliothèque
+      </a>
+
+    </div>
+
+  </section>
 
 </main>
 
 <footer>
 
-  <h3>Recherche le Khayr</h3>
+  <div class="logo-footer">
+    Recherche <span>le Khayr</span>
+  </div>
 
   <p>
     Apprendre • Partager • Se rappeler • Faire le bien
@@ -412,10 +656,10 @@ Auto elite shop <autoeliteshop38@gmail.com>
 
 <script>
 
-function rechercher() {
+function lancerRecherche() {
 
   const recherche =
-    document.getElementById("searchInput").value.trim();
+    document.getElementById("recherche").value.trim();
 
   if (recherche === "") {
 
